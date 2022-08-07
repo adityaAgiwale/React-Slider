@@ -1,0 +1,139 @@
+.App {
+  font-family: "poppins", sans-serif;
+  text-align: center;
+}
+.heading {
+  color: red;
+  font-weight: 900;
+  font-size: 45px;
+  margin-bottom: 100px;
+}
+
+.slash {
+  color: black;
+  overflow: hidden;
+  animation: none;
+}
+
+.Main__Section {
+  position: relative;
+  width: 80vw;
+  height: 450px;
+  overflow: hidden;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+article {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadein 1.5s;
+}
+
+article.lastSlide {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+article.nextSlide {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+.Person__Image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 1px solid #c4c4c4;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.45) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.quote__Icon {
+  font-size: 30px !important;
+  color: red;
+}
+
+.next__btn {
+  position: absolute;
+  top: 40%;
+  left: 0px;
+}
+
+.prev__btn {
+  position: absolute;
+  top: 40%;
+  right: 0px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-size: 40px;
+}
+
+button:hover {
+  color: red;
+}
+
+.Person__Name {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0;
+}
+
+.Job__title {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.quote {
+  font-weight: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+@media (min-height: 675px) {
+  .Person__Image {
+    width: 100px;
+    height: 100px;
+  }
+  .quote {
+    font-size: 14px;
+  }
+
+  .next__btn {
+    top: 25%;
+    font-size: 35px;
+  }
+
+  .prev__btn {
+    top: 25%;
+    font-size: 35px;
+  }
+}
